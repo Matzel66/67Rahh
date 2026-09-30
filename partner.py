@@ -1,5 +1,4 @@
 def teil_a():
-    # Person A arbeitet hier
     summe = 0
     for i in range(1, 500001):
         if i % 7 == 0 and i % 5 != 0:
@@ -10,9 +9,12 @@ def teil_a():
 
 
 def teil_b():
-    #Person B arbeitet hier
-    return 0
+    summe = 0
+    for i in range(1, 500001):
+        if i % 11 == 0 and i % 3 != 0:
+            summe += i
+    return summe
 
 print(teil_a())
-
-#die letzen 3 ziffer sind die Lösung
+print(teil_b())
+print(str(teil_a() + teil_b())[-3:])
